@@ -1,0 +1,36 @@
+{
+  "region":{
+    "name":"melbourne",
+    "endpoint":"nova.rc.nectar.org.au"
+  },
+  "credentials":{
+    "access_key":"b6515910efa848a3b26018954b8798a6",
+    "secret_key":"5c85095dd42b49ad9684d9a12b874f22"
+  },
+  "key":{
+    "name":"group25"
+  },
+  "security_groups":[
+    {"name":"ssh"},
+    {"name":"default"},
+    {"name":"node"}
+  ],
+  "sys_types":[
+    {
+      "name":"ccc_1",
+      "type":"webserver",
+      "instance_type":"m2.small",
+      "image_id":"ami-190a1773",
+      "placement":"melbourne-qh2",
+      "security_groups":["ssh","default","node"]
+    },
+    {
+      "name":"couchdb-master",
+      "type":"combo",
+      "instance_type":"m2.small",
+      "image_id":"ami-190a1773",
+      "placement":"melbourne-qh2",
+      "security_groups":["ssh","default"]
+    }
+  ]
+}
