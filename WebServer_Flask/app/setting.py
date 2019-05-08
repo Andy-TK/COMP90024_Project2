@@ -1,3 +1,0 @@
-COUCHDB_ADDRESS = '172.26.38.7'
-PORT = 5984
-DB = 'twitter'
