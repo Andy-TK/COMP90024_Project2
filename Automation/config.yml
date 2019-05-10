@@ -1,0 +1,32 @@
+---
+availability_zone: melbourne-qh2-uom
+instance_name: ccc_1
+instance_image: 394a1b97-a8d3-4593-aab0-8156f0dfeeca
+instance_key_name: CCC
+instance_flavor: uom.mse.2c9g
+security_groups: http,ssh
+
+volumes:
+  - vol_name: CCC_1
+    vol_size: 50
+
+
+#volumes:
+#  - vol_name: ccc_1
+#    vol_size: 30
+#
+#security_groups:
+#  - name: ssh
+#    description: "SSH Access"
+#    protocol: tcp
+#    port_range_min: 22
+#    port_range_max: 22
+#    remote_ip_prefix: 0.0.0.0/0
+#  - name: http
+#    desription: "HTTP Access"
+#    protocol: tcp
+#    port_range_min: 22
+#    port_range_max: 22
+#    remote_ip_prefix: 0.0.0.0/0
+
+

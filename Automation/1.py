@@ -45,7 +45,7 @@ ec2_conn = boto.connect_ec2(aws_access_key_id=jconfig['credentials']['access_key
                             is_secure=True, region=region, port=PORT, path=PATH, validate_certs=False)
 
 # attachVolume(ec2_conn, volume_id="vol-bf2e12d5", instance_id="i-8e287e3a")
-attachVolume(ec2_conn, volume_id="vol-7d655e90", instance_id="i-8e287e3a")
+attachVolume(ec2_conn, volume_id="vol-8f7ac0b8", instance_id="i-3b68ffbd")
 # print('Connecting to Nectar finshed')
 # images = ec2_conn.get_all_images()
 #
