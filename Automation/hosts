@@ -1,14 +1,12 @@
-[localhost]
-127.0.0.1
-
-[localhost:vars]
-ansible_connection=local
-
 [Harvest]
+172.26.38.7
 
+[couchDB]
+172.26.37.253
+172.26.38.7
 
 [Data_analysis]
-
+172.26.37.253
 
 [Webserver]
 172.26.37.183

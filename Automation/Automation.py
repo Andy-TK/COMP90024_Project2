@@ -14,21 +14,21 @@ if __name__ == "__main__":
     process.sendline('YTljYzQzZTM1OTkwNjY4')
     i = process.expect('BECOME password:')
     process.sendline('9588')
-
+    process.expect(pexpect.EOF)
     # pattern = "\n(\S+).*?([0-9]+)%"
     # filesystem_list = []
 
-    for dummy in range(0, 100):
-        try:
-            i = process.expect('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
-            if i == 0:
-                f = open("hosts", "a+")
-                print(process.match.group(0))
-                string = str(process.match.group(0), encoding="utf-8")
-                f.write(string)
-                f.close()
-        except:
-            break
+    # for dummy in range(0, 100):
+    #     try:
+    #         i = process.expect('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
+    #         if i == 0:
+    #             f = open("hosts", "a+")
+    #             # print(process.match.group(0))
+    #             string = str(process.match.group(0), encoding="utf-8")
+    #             f.write(string)
+    #             f.close()
+    #     except:
+    #         break
 
-
+    pexpect.run
 

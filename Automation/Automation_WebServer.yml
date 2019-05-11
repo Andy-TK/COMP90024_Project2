@@ -1,6 +1,7 @@
 - hosts: Webserver
-  gather_facts: true
+  gather_facts: false
   remote_user: ubuntu
+  become: yes
 
   roles:
     - role: WebServer

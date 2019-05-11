@@ -3,3 +3,4 @@ venv/
 .DS_Store
 /Automation_build_instance.retry
 /CCC.pem
+/.gitignore

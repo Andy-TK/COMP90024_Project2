@@ -4,7 +4,7 @@ instance_name: ccc_1
 instance_image: 394a1b97-a8d3-4593-aab0-8156f0dfeeca
 instance_key_name: CCC
 instance_flavor: uom.mse.2c9g
-security_groups: http,ssh
+security_groups: default,http,ssh
 
 volumes:
   - vol_name: CCC_1

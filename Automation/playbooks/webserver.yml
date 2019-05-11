@@ -16,7 +16,9 @@
 # 1.1.2 install the common apt packages
   - name: install the packages using apt modules
     become: true
-    apt: name={{item}} state=latest update_cache=yes
+    apt:
+      name:
+    state=latest update_cache=yes
     with_items:
       - python3-pip
       - git
