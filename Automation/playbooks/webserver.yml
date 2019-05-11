@@ -42,7 +42,7 @@
        state: directory
        owner: ubuntu
        group: ubuntu
-       mode: 0755
+       mode: 0777
      with_items:
       - /data/workspace
       - /data/log
