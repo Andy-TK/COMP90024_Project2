@@ -18,9 +18,17 @@ def works():
     return render_template('works.html')
 
 
-@app.route('/workstest')
-def workstest():
-    return render_template('workstest.html')
+@app.route('/works01')
+def works01():
+    return render_template('works01.html')
+
+@app.route('/works02')
+def works02():
+    return render_template('works02.html')
+
+@app.route('/works03')
+def works03():
+    return render_template('works03.html')
 
 
 @app.route('/contact')
