@@ -23,7 +23,7 @@
   apt:
     state: latest
     update_cache: yes
-    name: ['python3-pip', 'git', 'vim', 'nginx']
+    name: ['python3-pip', 'git', 'vim', 'nginx', 'libpcre3', 'libpcre3-dev']
 
 
 # 1.2 directory related
@@ -61,15 +61,23 @@
     chdir: /data/workspace
     creates: /data/workspace/Cluster_and_Cloud_Computing
 
-- name: install webserver package
+
+
+- name: install environemnt
   become: true
-  command: pip3 install {{item}}
+  command: pip3 install {{ item }}
   with_items:
     - couchdb
     - flask
     - uwsgi
     - virtualenv
 
+- name: go to webserver
+  command: cd /data/workspace/Cluster_and_Cloud_Computing/WebServer_Flask
+
+
+- name: active virtualenc
+  command: source venv/bin/activate
 
 ## 2 specific: crawler-streamer
 ### 2.1 install the node.js related packages
