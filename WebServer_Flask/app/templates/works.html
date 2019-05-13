@@ -290,7 +290,21 @@
       <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
       <div id="barchart">
         <script>
-          Highcharts.chart('container', {
+          var cities_data = [{
+                  color:'#EC7063',
+                  name: 'Angry Value',
+                  data: [92, 85, 75, 56, 45]
+              }, {
+                  color:'#5DADE2',
+                  name: 'Median Income',
+                  data: [87, 90, 35, 52, 45]
+              }, {
+                  color:'#F5B041',
+                  name: 'Unemployment Rate',
+                  data: [84, 78, 76, 65, 76]
+              }]
+
+          new Highcharts.chart('container', {
               chart: {
                   type: 'bar'
               },
@@ -340,36 +354,30 @@
               credits: {
                   enabled: false
               },
-              series: [{
-                  name: 'Tweets',
-                  data: [92, 85, 75, 56, 45]
-              }, {
-                  name: 'Work Press',
-                  data: [87, 90, 35, 52, 45]
-              }, {
-                  name: 'Alcohol',
-                  data: [84, 78, 76, 65, 76]
-              }, {
-                  name: 'Income',
-                  data: [92, 90, 82, 80, 78]
-              }, {
-                  name: 'Angry',
-                  data: [84, 78, 76, 65, 76]
-              }, {
-                  name: 'Junk Food',
-                  data: [84, 78, 76, 65, 76]
-              }]
+              series: cities_data
           });
         </script>
       </div>
-
-      <!--Linear Regression Result Figure -->
-      <br>
-      <img src="../static/img/lr.jpg">
-
     </div>
+
+
+    <!--Linear Regression Result Figure -->
+    <div class="col-lg-8 col-lg-offset-2">
+      <br>
+      <br>
+      <h4> Linear Regression Models</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      <img src="../static/img/LR_Income.png">
+      <br>
+      <img src="../static/img/LR_Unemploy.png">
+      <br>
+      <img src="../static/img/LR_Age.png">
+    </div>
+
   </div>
 </div>
+
 
 <div id="social">
   <div class="container">
