@@ -1,8 +1,5 @@
 /venv/
 /.idea/
-/__pycache__/
+__pycache__/
 .DS_Store
 /.gitignore
-将删除 app/__pycache__/
-将删除 app/controller/__pycache__/
-将删除 app/model/__pycache__/
