@@ -8,7 +8,7 @@ security_groups: default,http,ssh
 
 volumes:
   - vol_name: CCC_1
-    vol_size: 50
+    vol_size: 5
 
 
 #volumes:

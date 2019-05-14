@@ -23,7 +23,7 @@
   apt:
     state: latest
     update_cache: yes
-    name: ['python3-pip', 'git', 'vim', 'libpcre3', 'libpcre3-dev']
+    name: ['python3-pip', 'git', 'vim', 'couchdb']
 
 
 # 1.2 directory related
@@ -51,7 +51,6 @@
   with_items:
     - /data/workspace
 
-
 ## 1.3 git
 - name: checkout from github
   become: true
@@ -60,19 +59,10 @@
     chdir: /data/workspace
     creates: /data/workspace/Cluster_and_Cloud_Computing
 
-
 - name: install environemnt
   become: true
   command: pip3 install {{ item }}
   with_items:
+    - tweepy
+    - urllib3
     - couchdb
-    - flask
-    - uwsgi
-
-
-- name: start uWSGI
-  become: true
-  command: uwsgi -d --ini uwsgi.ini
-  args:
-    chdir: /data/workspace/Cluster_and_Cloud_Computing/WebServer_Flask
-
