@@ -1,0 +1,6 @@
+- hosts: DataAnalysis
+  gather_facts: false
+  remote_user: ubuntu
+
+  roles:
+    - role: DataAnalysis
