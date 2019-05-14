@@ -1,6 +1,7 @@
 venv/
 .idea/
 .DS_Store
-/Automation_build_instance.retry
+*.retry
 /CCC.pem
 /.gitignore
+__pycache__
