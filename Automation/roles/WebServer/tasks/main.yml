@@ -62,14 +62,14 @@
     creates: /data/workspace/Cluster_and_Cloud_Computing
 
 
-#- name: install environemnt
-#  become: true
-#  command: pip3 install {{ item }}
-#  with_items:
-#    - couchdb
-#    - flask
-#    - uwsgi
-#    - virtualenv
+- name: install environemnt
+        become: true
+        command: pip3 install {{ item }}
+        with_items:
+          - couchdb
+          - flask
+          - uwsgi
+          - virtualenv
 
 
 

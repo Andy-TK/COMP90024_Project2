@@ -2,8 +2,13 @@ import os
 import pexpect
 import sys
 import time
+import logging
 
 if __name__ == "__main__":
+    logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s',
+                        level=logging.INFO)
+    logging.info('Start to build Openstack instance:')
+
     process = pexpect.spawn('sh ./script_os.sh')
     process.logfile_read = sys.stdout.buffer
     process.expect(
@@ -13,9 +18,10 @@ if __name__ == "__main__":
     process.sendline('9588')
     process.expect(pexpect.EOF)
 
+    logging.info('Waiting for setting up instance for 2 minutes:')
+    time.sleep(120)
 
-    time.sleep(300)
-
+    logging.info('Start to build Web server:')
     pexpect.run('sh ./script_web.sh', logfile=sys.stdout.buffer)
 
 
