@@ -283,93 +283,103 @@
   <div class="row centered mt mb">
     <div class="col-lg-8 col-lg-offset-2">
       <h4>Statistical Analysis</h4>
-      <p style="text-align:justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      <p style="text-align:justify">As our project targets on analysing the relationship between work pace level of each
+        city and its corresponding anger value, and the big cities usually come with faster work pace and higher working
+        pressure. Due to the limited space, we chose the top5 cities in the histogram, according to its populations and
+        total numbers of tweets that can be trace back to, and compare the angry value with its Median Annually Income
+        and Unemployment Rate. From the chart, Sydney has the highest median income and highest anger value and Melbourne
+        has the lowest personal median income and almost the lowest anger value. However. Brisbane also has high median
+        income but the lowest angry value. Hence, high income doesn’t necessarily lead to higher angry value and it
+        seems that there is no obvious correlation between the unemployment rate and the angry value.</p>
+    <br>
     </div>
 
-    <div class="col-lg-10 col-lg-offset-1 mt">
-      <!-- Bar Chart -->
-      <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
-      <div id="barchart">
-        <script>
-          var cities_data = [{
-                  color:'#EC7063',
-                  name: 'Angry Value',
-                  data: [55.03, 45.46, 52.49, 45.35, 45.51]
-              }, {
-                  color:'#5DADE2',
-                  name: 'Median Income',
-                  data: [87.24, 17.25, 61.3, 70.61, 41.75]
-              }, {
-                  color:'#F5B041',
-                  name: 'Unemployment Rate',
-                  data: [21.14, 84.00, 42.86, 31.43, 82.29]
-              }]
+    <!-- Bar Chart -->
+    <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+    <div id="barchart">
+      <script>
+        var cities_data = [{
+          color:'#EC7063',
+          name: 'Angry Value',
+          data: [55.03, 45.46, 52.49, 45.35, 45.51]
+        }, {
+          color:'#5DADE2',
+          name: 'Median Income',
+          data: [87.24, 17.25, 61.3, 70.61, 41.75]
+        }, {
+          color:'#F5B041',
+          name: 'Unemployment Rate',
+          data: [21.14, 84.00, 42.86, 31.43, 82.29]
+        }]
 
-          new Highcharts.chart('container', {
-              chart: {
-                  type: 'bar'
+        new Highcharts.chart('container', {
+          chart: {
+            type: 'bar'
+          },
+          title: {
+            text: 'Statistics of Top 5 Cities in Australia'
+          },
+          subtitle: {
+            text: '(Source: data from tweets and AURIN database.)'
+          },
+          xAxis: {
+            categories: ['Sydney', 'Melbourne', 'Perth', 'Brisbane', 'Adelaide'],
+            title: {
+              text: null
+            }
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: 'Score',
+              align: 'high'
+            },
+            labels: {
+              overflow: 'justify'
+            }
+          },
+          tooltip: {
+            valueSuffix: ' score'
+          },
+          plotOptions: {
+            bar: {
+              dataLabels: {
+                enabled: true
+              }
+            }
+          },
+          legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: 0,
+            y: 235,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
               },
-              title: {
-                  text: 'Statistics of Top 5 Cities in Australia'
-              },
-              subtitle: {
-                    //text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
-              },
-              xAxis: {
-                  categories: ['Sydney', 'Melbourne', 'Perth', 'Brisbane', 'Adelaide'],
-                  title: {
-                      text: null
-                  }
-              },
-              yAxis: {
-                  min: 0,
-                  title: {
-                      text: 'Score',
-                      align: 'high'
-                  },
-                  labels: {
-                      overflow: 'justify'
-                  }
-              },
-              tooltip: {
-                  valueSuffix: ' score'
-              },
-              plotOptions: {
-                  bar: {
-                      dataLabels: {
-                          enabled: true
-                      }
-                  }
-              },
-              legend: {
-                  layout: 'vertical',
-                  align: 'right',
-                  verticalAlign: 'top',
-                  x: 0,
-                  y: 235,
-                  floating: true,
-                  borderWidth: 1,
-                  backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-                  shadow: true
-              },
-              credits: {
-                  enabled: false
-              },
-              series: cities_data
-          });
-        </script>
-      </div>
+          credits: {
+            enabled: false
+          },
+          series: cities_data
+        });
+      </script>
     </div>
 
-
-    <!--Linear Regression Result Figure -->
+    <!--Linear Regression -->
     <div class="col-lg-8 col-lg-offset-2">
       <br>
       <br>
       <h4> Linear Regression Models</h4>
-        <p style="text-align:justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <p style="text-align:justify">In statistics, linear regression is a linear approach to modelling the relationship between a
+          scalar response (or dependent variable) and one or more explanatory variables (or independent variables).
+          From the scatter plot, we can see there is a potentially positive correlation between the angry
+          values of each city and its median personal income, although there is still a few outliers lie beyond.
+          Unfortunately, the correlation between the unemployment rate and angry value does not demonstrate a positive
+          correlation as expected, and is even slightly negative. Besides, there is no obvious correlation between
+          median age of earners and the angry value. This liner regression model doesn’t fully verify our hypothesis,
+          due to the limited size of our tweets data set and biased dataset.</p>
       <img src="../static/img/LR_Income.png">
       <br>
       <img src="../static/img/LR_Unemploy.png">
