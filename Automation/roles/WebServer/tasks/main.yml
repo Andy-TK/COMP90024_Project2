@@ -23,7 +23,7 @@
   apt:
     state: latest
     update_cache: yes
-    name: ['python3-pip', 'git', 'vim', 'nginx', 'libpcre3', 'libpcre3-dev']
+    name: ['python3-pip', 'git', 'vim', 'libpcre3', 'libpcre3-dev']
 
 
 # 1.2 directory related
@@ -62,47 +62,20 @@
     creates: /data/workspace/Cluster_and_Cloud_Computing
 
 
+#- name: install environemnt
+#  become: true
+#  command: pip3 install {{ item }}
+#  with_items:
+#    - couchdb
+#    - flask
+#    - uwsgi
+#    - virtualenv
 
-- name: install environemnt
+
+
+- name: start uWSGI
   become: true
-  command: pip3 install {{ item }}
-  with_items:
-    - couchdb
-    - flask
-    - uwsgi
-    - virtualenv
+  command: uwsgi -d --ini uwsgi.ini
+  args:
+    chdir: /data/workspace/Cluster_and_Cloud_Computing/WebServer_Flask
 
-- name: go to webserver
-  command: cd /data/workspace/Cluster_and_Cloud_Computing/WebServer_Flask
-
-
-- name: active virtualenc
-  command: source venv/bin/activate
-
-## 2 specific: crawler-streamer
-### 2.1 install the node.js related packages
-### 2.2 install the node.js
-#  - name: install the node.js related packasged
-#    become: true
-#    apt: name={{item}} state=latest update_cache=yes
-#    with_items:
-#      - npm
-#  - name: install the pm2
-#    become: true
-#    command: npm install pm2 -g
-#
-#   - name: install the node.js
-#     ignore_errors: True
-#     shell: |
-#       cd /data/workspace
-#       wget https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-x64.tar.xz
-#       mkdir node
-#       tar xvf node-v*.tar.?z --strip-components=1 -C ./node
-#       cd /data/workspace
-#       sudo rm -rf node-v*
-#       mkdir node/etc
-#       echo 'prefix=/usr/local' > /data/workspace/node/etc/npmrc
-#       sudo  mv node /opt/
-#       sudo chown -R root: /opt/node
-#       sudo ln -s /opt/node/bin/node /usr/local/bin/node
-#       sudo ln -s /opt/node/bin/npm /usr/local/bin/npm
