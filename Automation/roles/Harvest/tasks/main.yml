@@ -62,6 +62,7 @@
     - urllib3
     - couchdb
 
+
 - name: run harvest script
   become: true
-  command: python3 /data/workspace/Cluster_and_Cloud_Computing/Harvest/tweets.py
+  command: python3 /data/workspace/Cluster_and_Cloud_Computing/Harvest/tweets.py &

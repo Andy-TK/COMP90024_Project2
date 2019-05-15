@@ -22,9 +22,11 @@ def works():
 def works01():
     return render_template('works01.html')
 
+
 @app.route('/works02')
 def works02():
     return render_template('works02.html')
+
 
 @app.route('/works03')
 def works03():

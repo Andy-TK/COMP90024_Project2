@@ -72,12 +72,17 @@
     - pprint
     - reactionrnn
 
+
+- name: setting crontab
+  become: true
+  command:  echo '0 * * * * python3 /LinearRegression.py' >> /etc/crontab
+
 - name: run harvest script
   become: true
   command: python3 {{ item }}
   with_items:
+    - SentimentAnalysis.py
     - LinearRegression.py
     - LinearRegression-UnemploymentRate.py
-    - SentimentAnalysis.py
   args:
-    chdir: /data/workspace/Cluster_and_Cloud_Computing/Data_analysis/LinearRegression.py
+    chdir: /data/workspace/Cluster_and_Cloud_Computing/Data_analysis/LinearRegression.py &
