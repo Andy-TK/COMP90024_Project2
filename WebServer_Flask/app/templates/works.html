@@ -6,6 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  <!-- Auto Screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Map View -->
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
@@ -91,7 +93,7 @@
 </div>
 
 
-<div id='map'></div>
+<div id='map' style="height: 100%"></div>
 <!-- Map Information Board-->
 <div class='map-overlay' id='features'><h2>Angry Value</h2><div id='pd'><p>Hover over a region!</p></div></div>
 <!-- Map Legend-->
@@ -187,7 +189,7 @@
   }
 </style>
 
-
+<div class="container">
 <script>
     // Mapbox Access Token
     mapboxgl.accessToken = 'pk.eyJ1IjoieWV5MTEiLCJhIjoiY2p2NWNqcndxMzBlMTN5bGFxaXN2emNjYyJ9.F3qEnnxwuo3OfkbBXodGWQ';
@@ -271,9 +273,9 @@
 
     map.getCanvas().style.cursor = 'default';
 </script>
+</div>>
 
-
-<section id="works" style="margin-top: 25%"></section>
+<section id="works" style="margin-top: 100px"></section>
 <div class="container">
   <div class="row centered mt mb">
     <div class="col-lg-8 col-lg-offset-2">

@@ -17,7 +17,7 @@
     force_apt_get: yes
     update_cache: yes
 
-
+# 1.1.2 install the common apt packages
 - name: install the packages using apt modules
   become: true
   apt:
@@ -26,6 +26,8 @@
     name: ['python3-pip', 'git', 'vim', 'libpcre3', 'libpcre3-dev']
 
 
+# 1.2 directory related
+# 1.2.1 mkdir the directory
 - name: mkdir the mount point
   become: true
   file:
@@ -36,6 +38,8 @@
     mode: 0755
 
 
+# 1.2.2 mount the volume on the directory
+# 1.2.3 mkdir the workspace
 - name: mkdir the /data/workspace
   become: true
   file:
@@ -48,6 +52,7 @@
     - /data/workspace
 
 
+## 1.3 git
 - name: checkout from github
   become: true
   command: git clone https://github.com/Neetordy/Cluster_and_Cloud_Computing.git
@@ -63,7 +68,6 @@
     - couchdb
     - flask
     - uwsgi
-    - BeautifulSoup4
 
 
 - name: start uWSGI
