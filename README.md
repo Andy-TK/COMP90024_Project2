@@ -9,11 +9,11 @@ For more details, please check the [project specifications](https://github.com/A
 #### 1. The Architecture and Website Demo
 In this project, four virtual machines (Ubuntu) were built on the [Nectar](https://nectar.org.au/) cloud platform, three of which deployed [CouchDB](http://couchdb.apache.org/) distributed databases and one deployed the [Flask](http://flask.palletsprojects.com/en/1.1.x/)-based Web backend, using [Ansible](https://www.ansible.com/) for automated deployment. Climb the Tweets posted in Australia over a period of time, store them into CouchDB, use the relevant Python libraries for sentiment analysis, and visualize the front end of the results.
 
-**1.1. The architecture is shown as below:**
+**1.1. The Architecture**
 
 <img src="https://github.com/Andy-TK/COMP90024_Project2/blob/master/images/architecture.png" alt="architecture" width="50%">
 
-**1.2. The website demo is shown as below:**
+**1.2. The Website Demo**
 
 <img src="https://github.com/Andy-TK/COMP90024_Project2/blob/master/images/00_home.png" alt="homepage" width="70%">
 
