@@ -35,7 +35,7 @@ The video demo is avaiable on my [YouTube](https://www.youtube.com/watch?v=4vs__
 
 * **CouchDB** - [CouchDB](http://couchdb.apache.org/) cluster and [Map-Reduce](https://docs.couchdb.org/en/stable/ddocs/views/intro.html)
 
-* **Data Visualization** - map function is based on [GeoJSON](https://geojson.org/) fileS and [Mapbox](https://www.mapbox.com/), and the graphs is based on a _JavaScript library_ [HighCharts](https://www.highcharts.com/)
+* **Data Visualization** - [GeoJSON](https://geojson.org/) files + [Mapbox](https://www.mapbox.com/) for map function and [HighCharts](https://www.highcharts.com/) for graphs function
 
 * **Website** - Based on _HTML5_, _CSS3_ and _JavaScript_. Template is provided by [templatemag.com](https://templatemag.com/)
 
