@@ -35,7 +35,7 @@ The video demo is avaiable on my [YouTube](https://www.youtube.com/watch?v=4vs__
 
 * **Data Analysis** - a _Python module_ [reactionrnn](https://pypi.org/project/reactionrnn/) for sentiment analysis
 
-* **Data Visualization** - [GeoJSON](https://geojson.org/) files + [Mapbox](https://www.mapbox.com/) for map function and [HighCharts](https://www.highcharts.com/) for graphs function
+* **Data Visualization** - [GeoJSON](https://geojson.org/) files + [Mapbox](https://www.mapbox.com/) for map function and [Highcharts](https://www.highcharts.com/) for graphs function
 
 * **Website** - Based on _HTML5_, _CSS3_ and _JavaScript_. Template is provided by [templatemag.com](https://templatemag.com/)
 
