@@ -6,7 +6,7 @@ In this project, four virtual machines (Ubuntu) were built on the [Nectar](https
 
 The architecture is shown as below:
 
-<img src="https://github.com/Andy-TK/COMP90024_Project2/blob/master/images/architecture.png" alt="architecture" width="70%">
+<img src="https://github.com/Andy-TK/COMP90024_Project2/blob/master/images/architecture.png" alt="architecture" width="50%">
 
 The website demo is shown as below:
 
