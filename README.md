@@ -27,7 +27,7 @@ The video demo is avaiable on my [YouTube](https://www.youtube.com/watch?v=4vs__
 
 * **WebServer** - webserver built by [Flask](http://flask.palletsprojects.com/en/1.1.x/) + [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/)
 
-* **Automation** - the [Ansible](https://www.ansible.com/) playbook + a _Python script_ [Automation.py](https://github.com/Andy-TK/COMP90024_Project2/blob/master/Automation/Automation.py) for auto environment deployment (an alternative option is [Docker](https://www.docker.com/))
+* **Automation** - [Ansible](https://www.ansible.com/) playbook + [Automation.py](https://github.com/Andy-TK/COMP90024_Project2/blob/master/Automation/Automation.py) for auto environment deployment (an alternative option is [Docker](https://www.docker.com/))
 
 * **Data Analysis** - a _Python module_ [reactionrnn](https://pypi.org/project/reactionrnn/) for sentiment analysis
 
