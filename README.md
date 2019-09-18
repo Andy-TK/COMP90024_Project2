@@ -29,11 +29,11 @@ The video demo is avaiable on my [YouTube](https://www.youtube.com/watch?v=4vs__
 
 * **Automation** - [Ansible playbook](https://www.ansible.com/) + [Automation.py](https://github.com/Andy-TK/COMP90024_Project2/blob/master/Automation/Automation.py) for auto environment deployment (an alternative option is [Docker](https://www.docker.com/))
 
-* **Data Analysis** - a _Python module_ [reactionrnn](https://pypi.org/project/reactionrnn/) for sentiment analysis
-
 * **Harvest** - crawler for Twitter in Australia
 
 * **CouchDB** - [CouchDB](http://couchdb.apache.org/) cluster and [Map-Reduce](https://docs.couchdb.org/en/stable/ddocs/views/intro.html)
+
+* **Data Analysis** - a _Python module_ [reactionrnn](https://pypi.org/project/reactionrnn/) for sentiment analysis
 
 * **Data Visualization** - [GeoJSON](https://geojson.org/) files + [Mapbox](https://www.mapbox.com/) for map function and [HighCharts](https://www.highcharts.com/) for graphs function
 
